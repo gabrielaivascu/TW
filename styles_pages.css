@@ -33,7 +33,6 @@ body {
 	line-height: 1.5;
 	color: white;
 	background-color: #E2ECFF;
-
 	width: 90%;
 	margin: 0px auto;
 
@@ -41,9 +40,8 @@ body {
 
 p {
     word-wrap: break-word;
-	font-size: 1.3em;
-	
-		overflow: hidden;
+	font-size: 1em;
+	text-indent: 40px;
 }
 h1{
 		text-indent: 40px;
@@ -121,7 +119,15 @@ footer {
 	
 clear:both; 
 }
-
+input,select,textarea {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
 
 input[type=submit] {
     width: 13%;
