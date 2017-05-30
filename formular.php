@@ -60,6 +60,9 @@
     		//	echo $data;
     		}
 
+$file = fopen('C:\Apache24\htdocs\SouR\formular.csv', 'w');
+
+
     $sql= "select suveniruri.nume from suveniruri, tara
     where suveniruri.id_tara=tara.id_tara and tara.nume=:tara and suveniruri.profil=:profil
     and to_date(:data,'YYYY-MM-DD')>=suveniruri.inceput_perioada and to_date(:data,'YYYY-MM-DD')<=suveniruri.sfarsit_perioada";
@@ -93,6 +96,7 @@ echo "<ul>";
     		//afiseaza linia
         echo "<li>";
             echo  ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") ;
+				fputcsv($file, $row);//pune in csv
         echo "</li>";
         }
 
