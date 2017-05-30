@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Adaugare suvenir</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css" type="text/css" media="screen">
+</head>
+<body>
+<main>
+	<header>
+		<br>
+		<h1>Completati formularul pentru stergerea unui suvenir in baza de date</h1>
+		<form action="stergere_suvenir.php"> 
+		<div>
+	  	<ul>
+			
+			<label for="id">Id suvenir:<br>
+			</label> <input type="number" name="id" id="id" value="" />
+			<br><br>
+			<label><input type="submit" value="Trimite" title="Trimite" /> </label>
+		</ul>
+	<br>
+	</form> 
+</main>
+</body>
+</html>
