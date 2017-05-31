@@ -23,6 +23,8 @@ echo 'connection succesfull on database';
 print "<br> ";
 print "<br> ";
 
+session_start();
+
 if ($_REQUEST["email"]) {
 	$email=$_REQUEST["email"];
 
@@ -32,14 +34,13 @@ if ($_REQUEST["psw"]) {
 	$psw=$_REQUEST["psw"];
 }
 
-$sql= "select * FROM turist where parola like :psw and email like :email ";
+$sql= "select nume, prenume FROM turist where parola like :psw and email like :email ";
 
 $stid = oci_parse($connection, $sql);
 
 
 oci_bind_by_name($stid, ':email', $email);
 oci_bind_by_name($stid, ':psw', $psw);
-
 
 if (!$stid) {
     $e = oci_error($connection);
@@ -54,14 +55,18 @@ if (!$r) {
 }
 
 if (oci_fetch($stid)) {
-    echo "Login reusit!<br>\n";
-		header("Location: acasa.html");
+
+$_SESSION['nume']=oci_result($stid, 'NUME');
+$_SESSION['prenume']=oci_result($stid, 'PRENUME');
+echo "Login reusit!<br>\n";
+$_SESSION['login_user']= $email;
+//echo $_SESSION['nume'];
+		header("Location: acasa.php");
 }
 else {
 	echo "Login nereusit!<br>\n";
 	header("Location: login.html");
 }
-
 
 
 
