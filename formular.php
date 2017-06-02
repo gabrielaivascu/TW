@@ -16,7 +16,7 @@
 		<div class="menu">
      <ul id="meniu-ul">
 	 <li id="meniu-li"><img src="logo.png" alt="logo"></li>
-        <li id="meniu-li"><a href="acasa.html"> Acasa</a></li>
+        <li id="meniu-li"><a href="acasa.php"> Acasa</a></li>
 		<li id="meniu-li"><a href="contulmeu.html">Contul meu</a></li>
 		<li id="meniu-li"><a href="formular.html">Formular</a></li>
 		<li id="meniu-li"><a href="filtrare.html">Statistici</a></li>
@@ -88,18 +88,19 @@ $file = fopen('C:\Apache24\htdocs\SouR\formular.csv', 'w');
         trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
     }
       echo "<br>";
-    // Fetch the results of the query
-echo "<ul>";
-while (($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_LOBS)) != false) {
 
-echo "<p>Suvenirurile din ". $tara . " din data de ". $data . " recomandate pentru ". $profil . " sunt:</p>";
+echo "<h1>Suvenirurile din ". $tara . " din data de ". $data . " pentru ". $profil . " sunt:</h1>";
+
+echo "<ul>";
+
+while (($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_LOBS)) != false) {
     echo "<li>";
     echo $row['NUME'];
     print ", pret:";
     echo $row['PRET'];
     print " lei.";
     echo "</li>";
-    echo '<img src="'.$row['NUME_IMG'].'" alt="martisor" style="width:100px;height:100px;">';
+    echo '<img src="'.$row['NUME_IMG'].'" alt="'.$row['NUME_IMG'].'" style="width:100px;height:100px;">';
   //  fputcsv($file, $row['NUME']);
     }
 echo "</ul>";
