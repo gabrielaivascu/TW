@@ -8,7 +8,7 @@
 <body>
 <main>
 	<header>
-			<div class="menu">
+		<div class="menu">
 
 						<ul id="meniu-ul">
 
@@ -19,10 +19,8 @@
 							<li id="meniu-li"><a href="listare_suvenir.html">Listare suvenir</a></li>
 							<li id="meniu-li"><a href="deconectare_admin.html">Deconectare</a></li>
 						</ul>
-							  
-				  </div>
 
-		<br>
+				  </div>
 <?php
 
 //Oracle DB user name
@@ -50,17 +48,9 @@ if ($_REQUEST["profil"]) {
 	$profil=$_REQUEST["profil"];
 
 }
-if ($_REQUEST["inceput_perioada"]) {
-	$inceput_perioada=$_REQUEST["inceput_perioada"];
 
-}
 if ($_REQUEST["id_tara"]) {
 	$id_tara=$_REQUEST["id_tara"];
-
-}
-
-if ($_REQUEST["sfarsit_perioada"]) {
-	$sfarsit_perioada=$_REQUEST["sfarsit_perioada"];
 
 }
 if ($_REQUEST["cultura"]) {
@@ -72,12 +62,28 @@ if ($_REQUEST["pret"]) {
 
 }
 
-$id=random_int(100,1000);
-//$id_tara=random_int(1,40);
-//$pret=random_int(1,2000);
+//------------------
+
+$target_dir = "";
+$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+
+if (file_exists($target_file)) {
+    echo "Sorry, file already exists.";
+} else {
+	move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
+}
+
+$nume_img=(string) basename( $_FILES["fileToUpload"]["name"]);
+
+//------------------
 
 
-$sql= "insert into suveniruri values (:id,:nume,:id_tara,:id_punct,:profil,:inceput_perioada,:sfarsit_perioada,:cultura,:pret)";
+$id=random_int(500,800);
+$inceput_perioada='01-JAN-17';
+$sfarsit_perioada='31-DEC-17';
+
+$sql= "insert into suveniruri values (:id,:nume,:id_tara,:id_punct,:profil,:inceput_perioada,:sfarsit_perioada,:cultura,:pret,:nume_img)";
 
 $stid = oci_parse($connection, $sql);
 
@@ -90,6 +96,7 @@ oci_bind_by_name($stid, ':inceput_perioada', $inceput_perioada);
 oci_bind_by_name($stid, ':sfarsit_perioada', $sfarsit_perioada);
 oci_bind_by_name($stid, ':cultura', $cultura);
 oci_bind_by_name($stid, ':pret', $pret);
+oci_bind_by_name($stid, ':nume_img', $nume_img);
 
 if (!$stid) {
     $e = oci_error($connection);
@@ -105,10 +112,10 @@ if (!$r) {
 
 else {
 print "<br> ";
-
 	print "<b>";
-	echo  'Insert reusit!';
+	echo  '<p>Insert reusit!</p>';
 		print "</b>";
+print "<br> ";
 }
 
 
