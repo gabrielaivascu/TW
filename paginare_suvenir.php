@@ -7,6 +7,20 @@
 </head>
 <body>
 <main>
+	<div class="menu">
+
+						<ul id="meniu-ul">
+
+							<li id="meniu-li"><img src="logo.png" alt="logo"></li>
+							<li id="meniu-li"><a href="acasa_admin.html"> Acasa admin</a></li>
+							<li id="meniu-li"><a href="adaugare_suvenir.html">Adauga suvenir</a></li>
+							<li id="meniu-li"><a href="stergere_suvenir.html">Sterge suvenir</a></li>
+							<li id="meniu-li"><a href="listare_suvenir.html">Listare suvenir</a></li>
+							<li id="meniu-li"><a href="deconectare_admin.html">Deconectare</a></li>
+						</ul>
+							  
+				  </div>
+
 	<?php
 //Oracle DB user name
 $username = 'STUDENT';
