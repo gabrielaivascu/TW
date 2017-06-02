@@ -21,7 +21,9 @@ echo 'connection failed on database';
 else
 echo 'connection succesfull on database';
 print "<br> ";
-print "<br> ";
+
+
+session_start();
 
 if ($_REQUEST["email"]) {
 	$email=$_REQUEST["email"];
@@ -53,13 +55,18 @@ if (!$r) {
     trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
 }
 
+
 if (oci_fetch($stid)) {
-    echo "Login reusit!<br>\n";
+
+echo "Login reusit!<br>\n";
+$_SESSION['login_admin']= $email;
+//echo $_SESSION['nume'];
+		header("Location: acasa_admin.html");
 }
 else {
 	echo "Login nereusit!<br>\n";
+	header("Location: loginadmin.html");
 }
-
 
 
 
