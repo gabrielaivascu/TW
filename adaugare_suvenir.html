@@ -7,8 +7,8 @@
 </head>
 <body>
 <main>
- <header>
-<div class="menu">
+	<header>
+		<div class="menu">
 
 						<ul id="meniu-ul">
 
@@ -19,39 +19,38 @@
 							<li id="meniu-li"><a href="listare_suvenir.html">Listare suvenir</a></li>
 							<li id="meniu-li"><a href="deconectare_admin.html">Deconectare</a></li>
 						</ul>
-							  
+
 				  </div>
 
-  <br>
-  <h1>Completati formularul pentru adaugarea unui suvenir in baza de date</h1>
-  <form action="adaugare_suvenir.php">
-  <div>
-    <ul>
-   <label for="nume">Nume suvenir:<br>
-   </label> <input type="text" name="nume" id="nume" value="" />
-   <br><br>
-   <label for="profil">Profil beneficiar:<br>
-   </label> <input type="text" name="profil" id="profil" value="" />
-   <br><br>
-   <label for="id_tara">Id tara:<br>
-   </label> <input type="number" name="id_tara" id="id_tara" value="" />
-   <br><br>
-   <label for="inceput_perioada">Inceput perioada:<br>
-   </label> <input type="date" name="inceput_perioada" id="inceput_perioada" value="" />
-   <br><br>
-   <label for="sfarsit_perioada">Sfarsit perioada:<br>
-   </label> <input type="date" name="sfarsit_perioada" id="sfarsit_perioada" value="" />
-   <br><br>
-   <label for="cultura">Cultura:<br>
-   </label> <input type="text" name="cultura" id="cultura" value="" />
-   <br><br>
-   <label for="pret">Pret:<br>
-   </label> <input type="number" name="pret" id="pret" value="" />
-   <br><br>
-   <label><input type="submit" value="Trimite" title="Trimite" /> </label>
-  </ul>
- <br>
- </form>
+
+		<br>
+		<h1>Completati formularul pentru adaugarea unui suvenir in baza de date</h1>
+		<form action="adaugare_suvenir.php" method="post" enctype="multipart/form-data">
+		<div>
+	  	<ul>
+			<label for="nume">Nume suvenir:<br>
+			</label> <input type="text" name="nume" id="nume" value="" />
+			<br><br>
+			<label for="profil">Profil beneficiar:<br>
+			</label> <input type="text" name="profil" id="profil" value="" />
+			<br><br>
+			<label for="id_tara">Id tara:<br>
+			</label> <input type="number" name="id_tara" id="id_tara" value="" />
+			<br><br>
+			<label for="cultura">Cultura:<br>
+			</label> <input type="text" name="cultura" id="cultura" value="" />
+			<br><br>
+			<label for="pret">Pret:<br>
+			</label> <input type="number" name="pret" id="pret" value="" />
+			<br><br>
+			<label for="fileToUpload">Selecteaza o imagine pentru suvenir:<br>
+			<input type="file" name="fileToUpload" id="fileToUpload">
+			<br><br>
+			<label><input type="submit" value="Trimite" title="Trimite" /> </label>
+		</ul>
+	<br>
+</form>
+
 </main>
 </body>
 </html>
