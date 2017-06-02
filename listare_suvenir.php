@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Adaugare suvenir</title>
+<title>Listare suvenir</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="styles.css" type="text/css" media="screen">
 </head>
 <body>
 <main>
-	<div class="menu">
+<div class="menu">
 
 						<ul id="meniu-ul">
 
@@ -18,9 +18,8 @@
 							<li id="meniu-li"><a href="listare_suvenir.html">Listare suvenir</a></li>
 							<li id="meniu-li"><a href="deconectare_admin.html">Deconectare</a></li>
 						</ul>
-							  
-				  </div>
 
+				  </div>
 	<?php
 //Oracle DB user name
 $username = 'STUDENT';
@@ -34,12 +33,9 @@ $username,
 $password,
 $connection_string
 );
-print "<br> ";
-print "<br> ";
-print "Lista suveniruri din baza de date:";
-print "<br> ";
-print "<br> ";
-$sql= "select * from SUVENIRURI";
+print "<p>Lista suveniruri din baza de date:</p>";
+
+$sql= "select * from SUVENIRURI order by id_tara";
 
 $stid = oci_parse($connection, $sql);
 
@@ -56,7 +52,8 @@ if (!$r) {
 }
 
 // Fetch the results of the query
-print "<table border='1'>\n";
+
+print "<table border='1'>";
 while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
     print "<tr>\n";
     foreach ($row as $item) {
@@ -66,9 +63,10 @@ while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
     print "</tr>\n";
 }
 print "</table>\n";
+
 print "<br> ";
 print "<br> ";
-// Close connection 
+// Close connection
 oci_close($connection);
 ?>
 </main>
