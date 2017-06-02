@@ -63,7 +63,7 @@
 $file = fopen('C:\Apache24\htdocs\SouR\formular.csv', 'w');
 
 
-    $sql= "select suveniruri.nume, suveniruri.nume_img from suveniruri, tara
+    $sql= "select suveniruri.nume, suveniruri.nume_img, suveniruri.pret from suveniruri, tara
     where suveniruri.id_tara=tara.id_tara and tara.nume=:tara and suveniruri.profil=:profil
     and to_date(:data,'YYYY-MM-DD')>=suveniruri.inceput_perioada and to_date(:data,'YYYY-MM-DD')<=suveniruri.sfarsit_perioada";
 
@@ -91,25 +91,22 @@ $file = fopen('C:\Apache24\htdocs\SouR\formular.csv', 'w');
     // Fetch the results of the query
 echo "<ul>";
 while (($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_LOBS)) != false) {
-/*
-        foreach ($row as $item) {
-    		//afiseaza linia
-        echo "<li>";
-            echo  ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") ;
-				fputcsv($file, $row);//pune in csv
-        echo "</li>";
-        }
-*/
+
+echo "<p>Suvenirurile din ". $tara . " din data de ". $data . " recomandate pentru ". $profil . " sunt:</p>";
     echo "<li>";
-    echo $row['NUME'] . "<br>\n";
+    echo $row['NUME'];
+    print ", pret:";
+    echo $row['PRET'];
+    print " lei.";
     echo "</li>";
     echo '<img src="'.$row['NUME_IMG'].'" alt="martisor" style="width:100px;height:100px;">';
   //  fputcsv($file, $row['NUME']);
     }
 echo "</ul>";
-      echo "<br>";
-    oci_close($connection);
-//oci_result($stid, 'NUME');
+
+echo "<br>";
+
+oci_close($connection);
 
     ?>
 
