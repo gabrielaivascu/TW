@@ -92,6 +92,11 @@ $file = fopen('C:\Apache24\htdocs\SouR\formular.csv', 'w');
 echo "<h1>Suvenirurile din ". $tara . " din data de ". $data . " pentru ". $profil . " sunt:</h1>";
 
 echo "<ul>";
+fputcsv($file, array('Nume', 'Pret', 'Nume_imagine'));
+$xml = new DomDocument("1.0","UTF-8");
+$container = $xml->createElement("container");
+$container = $xml->appendChild($container);
+
 
 while (($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_LOBS)) != false) {
     echo "<li>";
@@ -101,11 +106,34 @@ while (($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_LOBS)) != false) {
     print " lei.";
     echo "</li>";
     echo '<img src="'.$row['NUME_IMG'].'" alt="'.$row['NUME_IMG'].'" style="width:100px;height:100px;">';
-  //  fputcsv($file, $row['NUME']);
+    fputcsv($file, array($row['NUME'],$row['PRET'].' lei',$row['NUME_IMG']));
+
+
+    $suvenir = $xml->createElement("suvenir");
+    $suvenir = $container->appendChild($suvenir);
+
+    $nume = $xml->createElement("nume",$row['NUME']);
+    $nume = $suvenir->appendChild($nume);
+
+    $pret = $xml->createElement("pret",$row['PRET']);
+    $pret = $suvenir->appendChild($pret);
+
+    $nume_img = $xml->createElement("nume_img",$row['NUME_IMG']);
+    $nume_img = $suvenir->appendChild($nume_img);
+
+    $xml->FormatOutput = true;
+    $string_value = $xml->saveXML();
+
+    $xml->save('formular.xml');
+
+
     }
+
 echo "</ul>";
 
 echo "<br>";
+
+
 
 oci_close($connection);
 
