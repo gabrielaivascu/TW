@@ -25,13 +25,13 @@ print "<br> ";
 
 session_start();
 
-if ($_REQUEST["email"]) {
-	$email=$_REQUEST["email"];
+if ($_POST["email"]) {
+	$email=$_POST["email"];
 
 }
 
-if ($_REQUEST["psw"]) {
-	$psw=$_REQUEST["psw"];
+if ($_POST["psw"]) {
+	$psw=$_POST["psw"];
 }
 
 $sql= "select * FROM admini where parola like :psw and email like :email ";
