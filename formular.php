@@ -47,17 +47,17 @@
 
     		if ($_POST['tara']) {
     			$tara = $_POST['tara'];
-    		 //echo $tara;
+
     		}
 
     		if ($_POST['profil']) {
     			$profil=$_POST['profil'];
-    		//	echo $profil;
+
     		}
 
     		if ($_REQUEST["data"]) {
     			$data=$_REQUEST["data"];
-    		//	echo $data;
+
     		}
 
 $file = fopen('C:\Apache24\htdocs\SouR\formular.csv', 'w');
@@ -91,14 +91,21 @@ $file = fopen('C:\Apache24\htdocs\SouR\formular.csv', 'w');
 
 echo "<h1>Suvenirurile din ". $tara . " din data de ". $data . " pentru ". $profil . " sunt:</h1>";
 
-echo "<ul>";
+
+//DECLARARI---
+//CSV
 fputcsv($file, array('Nume', 'Pret', 'Nume_imagine'));
+//XML
 $xml = new DomDocument("1.0","UTF-8");
 $container = $xml->createElement("container");
 $container = $xml->appendChild($container);
+//JSON
+$return_arr = array();
+$suveniruri = array();
 
-
+echo "<ul>";
 while (($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_LOBS)) != false) {
+//HTML
     echo "<li>";
     echo $row['NUME'];
     print ", pret:";
@@ -106,38 +113,43 @@ while (($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_LOBS)) != false) {
     print " lei.";
     echo "</li>";
     echo '<img src="'.$row['NUME_IMG'].'" alt="'.$row['NUME_IMG'].'" style="width:100px;height:100px;">';
-    fputcsv($file, array($row['NUME'],$row['PRET'].' lei',$row['NUME_IMG']));
 
+//CSV
+fputcsv($file, array($row['NUME'],$row['PRET'].' lei',$row['NUME_IMG']));
 
-    $suvenir = $xml->createElement("suvenir");
-    $suvenir = $container->appendChild($suvenir);
+//JSON
+$suveniruri[] = array('nume'=> $row['NUME'], 'pret'=> $row['PRET'], 'nume_img'=>$row['NUME_IMG']);
 
-    $nume = $xml->createElement("nume",$row['NUME']);
-    $nume = $suvenir->appendChild($nume);
+//XML
+$suvenir = $xml->createElement("suvenir");
+$suvenir = $container->appendChild($suvenir);
 
-    $pret = $xml->createElement("pret",$row['PRET']);
-    $pret = $suvenir->appendChild($pret);
+$nume = $xml->createElement("nume",$row['NUME']);
+$nume = $suvenir->appendChild($nume);
 
-    $nume_img = $xml->createElement("nume_img",$row['NUME_IMG']);
-    $nume_img = $suvenir->appendChild($nume_img);
+$pret = $xml->createElement("pret",$row['PRET']);
+$pret = $suvenir->appendChild($pret);
 
-    $xml->FormatOutput = true;
-    $string_value = $xml->saveXML();
+$nume_img = $xml->createElement("nume_img",$row['NUME_IMG']);
+$nume_img = $suvenir->appendChild($nume_img);
 
-    $xml->save('formular.xml');
+$xml->FormatOutput = true;
+$string_value = $xml->saveXML();
+$xml->save('formular.xml');
 
-
-    }
+}
 
 echo "</ul>";
-
 echo "<br>";
 
-
+$return_arr['suveniruri'] = $suveniruri;
+$fp = fopen('formular.json', 'w');
+fwrite($fp, json_encode($return_arr));
+fclose($fp);
 
 oci_close($connection);
 
-    ?>
+?>
 
 				<footer>
 					<p id="contact">
