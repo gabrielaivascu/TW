@@ -66,7 +66,6 @@ if ($_REQUEST["pret"]) {
 
 $target_dir = "";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 
 if (file_exists($target_file)) {
     echo "Sorry, file already exists.";
@@ -123,6 +122,7 @@ print "<br> ";
 oci_close($connection);
 
 ?>
+
 
 </main>
 </body>
