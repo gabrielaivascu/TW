@@ -1,4 +1,4 @@
-drop table suveniruri;
+DROP TABLE SUVENIRURI;
 CREATE TABLE SUVENIRURI (
 id_suvenir NUMBER,
 nume VARCHAR2(40),
@@ -10,8 +10,108 @@ sfarsit_perioada DATE,
 cultura varchar2(30),
 pret NUMBER,
 nume_img VARCHAR2(40)
-);
+)
+
 /
+--Romania
+insert into suveniruri values(1, 'martisor', 2, 1, 'fiica', '01-FEB-17', '31-MAR-17','romaneasca', 15,'martisor.jpg');
+insert into suveniruri values(2, 'martisor', 2, 2, 'fiu', '01-FEB-17', '31-MAR-17','romaneasca', 15,'martisor.jpg');
+insert into suveniruri values(3, 'martisor', 2, 3, 'nepot', '01-FEB-17', '31-MAR-17','romaneasca', 15,'martisor.jpg');
+insert into suveniruri values(4, 'martisor', 2, 4, 'nepoata', '01-FEB-17', '31-MAR-17','romaneasca', 15,'martisor.jpg');
+insert into suveniruri values(5, 'martisor', 2, 5, 'bunic', '01-FEB-17', '31-MAR-17','romaneasca', 15,'martisor.jpg');
+insert into suveniruri values(6, 'martisor', 2, 6, 'bunica', '01-FEB-17', '31-MAR-17','romaneasca', 15,'martisor.jpg');
+insert into suveniruri values(7, 'martisor', 2, 7, 'sot', '01-FEB-17', '31-MAR-17','romaneasca', 15,'martisor.jpg');
+insert into suveniruri values(8, 'martisor', 2, 8, 'sotie', '01-FEB-17', '31-MAR-17','romaneasca', 15,'martisor.jpg');
+insert into suveniruri values(9, 'martisor', 2, 1, 'frate', '01-FEB-17', '31-MAR-17','romaneasca', 15,'martisor.jpg');
+insert into suveniruri values(10, 'martisor', 2, 2, 'sora', '01-FEB-17', '31-MAR-17','romaneasca', 15,'martisor.jpg');
+insert into suveniruri values(11, 'martisor', 2, 3, 'prieten', '01-FEB-17', '31-MAR-17','romaneasca', 15,'martisor.jpg');
+insert into suveniruri values(12, 'martisor', 2, 4, 'prietena', '01-FEB-17', '31-MAR-17','romaneasca', 15,'martisor.jpg');
+
+insert into suveniruri values(33, 'Stegul Romaniei',2, null, 'nepot', '01-JAN-17', '31-DEC-17', 'romaneasca', 20,'steag.jpg');
+insert into suveniruri values(34, 'Stegul Romaniei',2, null, 'nepoata', '01-JAN-17', '31-DEC-17', 'romaneasca',20,'steag.jpg');
+insert into suveniruri values(35, 'Stegul Romaniei',2, null, 'frate', '01-JAN-17', '31-DEC-17', 'romaneasca',20,'steag.jpg');
+insert into suveniruri values(36, 'Stegul Romaniei',2, null, 'sora', '01-JAN-17', '31-DEC-17', 'romaneasca',20,'steag.jpg');
+insert into suveniruri values(37, 'Stegul Romaniei',2, null, 'prieten', '01-JAN-17', '31-DEC-17', 'romaneasca',20,'steag.jpg');
+insert into suveniruri values(38, 'Stegul Romaniei',2, null, 'prietena', '01-JAN-17', '31-DEC-17', 'romaneasca',20,'steag.jpg');
+insert into suveniruri values(39, 'Stegul Romaniei',2, null, 'bunic', '01-JAN-17', '31-DEC-17', 'romaneasca',20,'steag.jpg');
+insert into suveniruri values(40, 'Stegul Romaniei',2, null, 'bunica', '01-JAN-17', '31-DEC-17', 'romaneasca',20,'steag.jpg');
+
+insert into suveniruri values(41, 'Magnet Castelul Bran',2, null, 'frate', '01-JAN-17', '31-DEC-17', 'romaneasca',10,'bran-frate.jpg');
+insert into suveniruri values(42, 'Magnet Castelul Bran',2, null, 'sora', '01-JAN-17', '31-DEC-17', 'romaneasca',10,'castelul-bran.jpg');
+insert into suveniruri values(43, 'Magnet Castelul Bran',2, null, 'bunic', '01-JAN-17', '31-DEC-17', 'romaneasca',10,'castelul-bran-bunic.jpg');
+insert into suveniruri values(44, 'Magnet Castelul Bran',2, null, 'bunica', '01-JAN-17', '31-DEC-17', 'romaneasca',10,'castelul-bran.jpg');
+insert into suveniruri values(45, 'Magnet Castelul Bran',2, null, 'nepot', '01-JAN-17', '31-DEC-17', 'romaneasca',10,'castelul-bran.jpg');
+insert into suveniruri values(46, 'Magnet Castelul Bran',2, null, 'nepoata', '01-JAN-17', '31-DEC-17', 'romaneasca',10,'castelul-bran.jpg');
+insert into suveniruri values(47, 'Magnet Castelul Bran',2, null, 'prieten', '01-JAN-17', '31-DEC-17', 'romaneasca',10,'castelul-bran.jpg');
+insert into suveniruri values(48, 'Magnet Castelul Bran',2, null, 'prietena', '01-JAN-17', '31-DEC-17', 'romaneasca',10,'castelul-bran.jpg');
+insert into suveniruri values(49, 'Magnet Castelul Bran',2, null, 'sot', '01-JAN-17', '31-DEC-17', 'romaneasca',10,'castelul-bran.jpg');
+insert into suveniruri values(50, 'Magnet Castelul Bran',2, null, 'sotie', '01-JAN-17', '31-DEC-17', 'romaneasca',10,'castelul-bran.jpg');
+
+--Franta
+insert into suveniruri values(13, 'breloc cu Turnul Eiffel',1, null, 'fiica', '01-JAN-17', '31-DEC-17', 'franceza', 30,'eiffel-mama.jpg');
+insert into suveniruri values(14, 'breloc cu Turnul Eiffel',1, null, 'fiu', '01-JAN-17', '31-DEC-17', 'franceza',30,'eiffel.jpg');
+insert into suveniruri values(15, 'breloc cu Turnul Eiffel',1, null, 'nepot', '01-JAN-17', '31-DEC-17', 'franceza',30,'eiffel.jpg');
+insert into suveniruri values(16, 'breloc cu Turnul Eiffel',1, null, 'nepoata', '01-JAN-17', '31-DEC-17', 'franceza',30,'eiffel-bunica.jpg');
+insert into suveniruri values(17, 'breloc cu Turnul Eiffel',1, null, 'prieten', '01-JAN-17', '31-DEC-17', 'franceza',30,'eiffel.jpg');
+insert into suveniruri values(18, 'breloc cu Turnul Eiffel',1, null, 'prietena', '01-JAN-17', '31-DEC-17', 'franceza',30,'eiffel-bunica.jpg');
+insert into suveniruri values(19, 'breloc cu Turnul Eiffel',1, null, 'bunic', '01-JAN-17', '31-DEC-17', 'franceza',30,'eiffel.jpg');
+insert into suveniruri values(20, 'breloc cu Turnul Eiffel',1, null, 'bunica', '01-JAN-17', '31-DEC-17', 'franceza',30,'eiffel-bunica.jpg');
+insert into suveniruri values(21, 'breloc cu Turnul Eiffel',1, null, 'sot', '01-JAN-17', '31-DEC-17', 'franceza',30,'eiffel.jpg');
+insert into suveniruri values(22, 'breloc cu Turnul Eiffel',1, null, 'sotie', '01-JAN-17', '31-DEC-17', 'franceza',30,'eiffel-mama.jpg');
+insert into suveniruri values(23, 'breloc cu Turnul Eiffel',1, null, 'frate', '01-JAN-17', '31-DEC-17', 'franceza',30,'eiffel.jpg');
+insert into suveniruri values(24, 'breloc cu Turnul Eiffel',1, null, 'sora', '01-JAN-17', '31-DEC-17', 'franceza',30,'eiffel-mama.jpg');
+
+insert into suveniruri values(25, 'parfum "Opium" de la Yves Saint Laurent',1, null, 'fiica', '01-JAN-17', '31-DEC-17', 'franceza',250,'black-opium.jpg');
+insert into suveniruri values(26, 'parfum "Opium" de la Yves Saint Laurent',1, null, 'sotie', '01-JAN-17', '31-DEC-17', 'franceza',250,'red-opium.jpg');
+insert into suveniruri values(26, 'parfum "Opium" de la Yves Saint Laurent',1, null, 'prietena', '01-JAN-17', '31-DEC-17', 'franceza',250,'red-opium.jpg');
+insert into suveniruri values(27, 'parfum "Opium" de la Yves Saint Laurent',1, null, 'sora', '01-JAN-17', '31-DEC-17', 'franceza',250,'black-opium.jpg');
+insert into suveniruri values(200, 'parfum "Opium" de la Yves Saint Laurent',1, null, 'nepoata', '01-JAN-17', '31-DEC-17', 'franceza',250,'red-opium.jpg');
+insert into suveniruri values(201, 'parfum "Opium" de la Yves Saint Laurent',1, null, 'bunica', '01-JAN-17', '31-DEC-17', 'franceza',250,'red-opium.jpg');
+
+
+
+
+--Germania
+
+insert into suveniruri values(51, 'Halba de bere',8, null, 'frate', '01-JAN-17', '31-DEC-17', 'germana',60,'halba.jpg');
+insert into suveniruri values(52, 'Halba de bere',8, null, 'sot', '01-JAN-17', '31-DEC-17', 'germana',60,'halba.jpg');
+insert into suveniruri values(53, 'Halba de bere',8, null, 'bunic', '01-JAN-17', '31-DEC-17', 'germana',60,'halba.jpg');
+insert into suveniruri values(54, 'Halba de bere',8, null, 'prieten', '01-JAN-17', '31-DEC-17', 'germana',60,'halba.jpg');
+insert into suveniruri values(55, 'Halba de bere',8, null, 'nepot', '01-JAN-17', '31-DEC-17', 'germana',60,'halba.jpg');
+insert into suveniruri values(202, 'Halba de bere',8, null, 'bunica', '01-JAN-17', '31-DEC-17', 'germana',60,'halba-femei.jpg');
+insert into suveniruri values(203, 'Halba de bere',8, null, 'sora', '01-JAN-17', '31-DEC-17', 'germana',60,'halba-femei.jpg');
+insert into suveniruri values(204, 'Halba de bere',8, null, 'sotie', '01-JAN-17', '31-DEC-17', 'germana',60,'halba-femei.jpg');
+
+insert into suveniruri values(204, 'Ceasuri Cuckoo',8, null, 'sotie', '01-JAN-17', '31-DEC-17', 'germana',300,'cuckoo.jpg');
+insert into suveniruri values(205, 'Ceasuri Cuckoo',8, null, 'sora', '01-JAN-17', '31-DEC-17', 'germana',300,'cuckoo.jpg');
+insert into suveniruri values(206, 'Ceasuri Cuckoo',8, null, 'bunica', '01-JAN-17', '31-DEC-17', 'germana',300,'cuckoo.jpg');
+insert into suveniruri values(207, 'Ceasuri Cuckoo',8, null, 'prietena', '01-JAN-17', '31-DEC-17', 'germana',300,'cuckoo.jpg');
+insert into suveniruri values(208, 'Ceasuri Cuckoo',8, null, 'bunic', '01-JAN-17', '31-DEC-17', 'germana',300,'cuckoo.jpg');
+insert into suveniruri values(209, 'Ceasuri Cuckoo',8, null, 'nepoata', '01-JAN-17', '31-DEC-17', 'germana',300,'cuckoo.jpg');
+insert into suveniruri values(210, 'Ceasuri Cuckoo',8, null, 'nepot', '01-JAN-17', '31-DEC-17', 'germana',300,'cuckoo.jpg');
+
+insert into suveniruri values(211, 'Muelhens Original Eau de Cologne',8, null, 'sotie', '01-JAN-17', '31-DEC-17', 'germana',500,'cologne.jpg');
+insert into suveniruri values(212, 'Muelhens Original Eau de Cologne',8, null, 'fiica', '01-JAN-17', '31-DEC-17', 'germana',500,'cologne.jpg');
+insert into suveniruri values(213, 'Muelhens Original Eau de Cologne',8, null, 'nepoata', '01-JAN-17', '31-DEC-17', 'germana',500,'cologne.jpg');
+insert into suveniruri values(214, 'Muelhens Original Eau de Cologne',8, null, 'bunica', '01-JAN-17', '31-DEC-17', 'germana',500,'cologne.jpg');
+insert into suveniruri values(215, 'Muelhens Original Eau de Cologne',8, null, 'prietena', '01-JAN-17', '31-DEC-17', 'germana',500,'cologne.jpg');
+
+insert into suveniruri values(216, 'Halba in forma de corn Cuchulainn',8, null, 'frate', '01-JAN-17', '31-DEC-17', 'germana',60,'horn.jpg');
+insert into suveniruri values(217, 'Halba in forma de corn Cuchulainn',8, null, 'sot', '01-JAN-17', '31-DEC-17', 'germana',60,'horn.jpg');
+insert into suveniruri values(218, 'Halba in forma de corn Cuchulainn',8, null, 'bunic', '01-JAN-17', '31-DEC-17', 'germana',60,'horn.jpg');
+insert into suveniruri values(219, 'Halba in forma de corn Cuchulainn',8, null, 'prieten', '01-JAN-17', '31-DEC-17', 'germana',60,'horn.jpg');
+insert into suveniruri values(220, 'Halba in forma de corn Cuchulainn',8, null, 'nepot', '01-JAN-17', '31-DEC-17', 'germana',60,'horn.jpg');
+
+
+--Japonia
+
+insert into suveniruri values(57, 'Evantai Sensu',19, null, 'nepoata', '01-JAN-17', '31-DEC-17', 'japoneza',100,'evantai.jpg');
+insert into suveniruri values(59, 'Evantai Sensu',19, null, 'prietena', '01-JAN-17', '31-DEC-17', 'japoneza',100'evantai.jpg');
+insert into suveniruri values(60, 'Evantai Sensu',19, null, 'sora', '01-JAN-17', '31-DEC-17', 'japoneza',100,'evantai.jpg');
+insert into suveniruri values(63, 'Evantai Sensu',19, null, 'sotie', '01-JAN-17', '31-DEC-17', 'japoneza',100,'evantai.jpg');
+insert into suveniruri values(65, 'Evantai Sensu',19, null, 'bunica', '01-JAN-17', '31-DEC-17', 'japoneza',100,'evantai.jpg');
+insert into suveniruri values(67, 'Evantai Sensu',19, null, 'prietena', '01-JAN-17', '31-DEC-17', 'japoneza',100,'evantai.jpg');
+
 insert into suveniruri values(100, 'Limoncello',3, null, 'sot', '01-JAN-17', '31-DEC-17', 'italiana',50,'limoncello.jpg');
 insert into suveniruri values(101, 'Limoncello',3, null, 'prieten', '01-JAN-17', '31-DEC-17', 'italiana',50,'limoncello.jpg');
 insert into suveniruri values(102, 'Limoncello',3, null, 'bunic', '01-JAN-17', '31-DEC-17', 'italiana',50,'limoncello.jpg');
@@ -98,12 +198,12 @@ insert into suveniruri values(177, 'Rochie Flamenco',7, null, 'fiica', '01-JAN-1
 insert into suveniruri values(178, 'Rochie Flamenco',7, null, 'sotie', '01-JAN-17', '31-DEC-17', 'spaniola',50,'flamenco.jpg');
 insert into suveniruri values(179, 'Rochie Flamenco',7, null, 'prietena', '01-JAN-17', '31-DEC-17', 'spaniola',50,'flamenco.jpg');
 insert into suveniruri values(180, 'Rochie Flamenco',7, null, 'sora', '01-JAN-17', '31-DEC-17', 'spaniola',50,'flamenco.jpg');
-insert into suveniruri values(181, 'Evantai',7, null, 'nepoata', '01-JAN-17', '31-DEC-17', 'spaniola',11,'evantai.jpg');
-insert into suveniruri values(182, 'Evantai',7, null, 'fiica', '01-JAN-17', '31-DEC-17', 'spaniola',11,'evantai.jpg');
-insert into suveniruri values(183, 'Evantai',7, null, 'sotie', '01-JAN-17', '31-DEC-17', 'spaniola',11,'evantai.jpg');
-insert into suveniruri values(184, 'Evantai',7, null, 'prietena', '01-JAN-17', '31-DEC-17', 'spaniola',11,'evantai.jpg');
-insert into suveniruri values(180, 'Evantai',7, null, 'sora', '01-JAN-17', '31-DEC-17', 'spaniola',11,'evantai.jpg');
-insert into suveniruri values(181, 'Evantai',7, null, 'bunica', '01-JAN-17', '31-DEC-17', 'spaniola',11,'evantai.jpg');
+insert into suveniruri values(181, 'Evantai',7, null, 'nepoata', '01-JAN-17', '31-DEC-17', 'spaniola',11,'evantai2.jpg');
+insert into suveniruri values(182, 'Evantai',7, null, 'fiica', '01-JAN-17', '31-DEC-17', 'spaniola',11,'evantai2.jpg');
+insert into suveniruri values(183, 'Evantai',7, null, 'sotie', '01-JAN-17', '31-DEC-17', 'spaniola',11,'evantai2.jpg');
+insert into suveniruri values(184, 'Evantai',7, null, 'prietena', '01-JAN-17', '31-DEC-17', 'spaniola',11,'evantai2.jpg');
+insert into suveniruri values(180, 'Evantai',7, null, 'sora', '01-JAN-17', '31-DEC-17', 'spaniola',11,'evantai2.jpg');
+insert into suveniruri values(181, 'Evantai',7, null, 'bunica', '01-JAN-17', '31-DEC-17', 'spaniola',11,'evantai2.jpg');
 insert into suveniruri values(182, 'Castaniete',7, null, 'nepoata', '01-JAN-17', '31-DEC-17', 'spaniola',15,'castaniete.jpg');
 insert into suveniruri values(183, 'Castaniete',7, null, 'nepot', '01-JAN-17', '31-DEC-17', 'spaniola',15,'castaniete.jpg');
 insert into suveniruri values(184, 'Castaniete',7, null, 'sot', '01-JAN-17', '31-DEC-17', 'spaniola',15,'castaniete.jpg');
@@ -147,15 +247,15 @@ insert into suveniruri values(525, 'Palarie Barmah',16, null, 'frate', '01-JAN-1
 
 --Franta
 insert into suveniruri values(68, 'Vin spumant Brut de Channay',1, null, 'frate', '01-JAN-17', '31-DEC-17', 'franceza',35,'vin_spumant.jpg');
-insert into suveniruri values(69, 'Vin spumant Brut de Channay',1, null, 'coleg', '01-JAN-17', '31-DEC-17', 'franceza',35,'vin_spumant.jpg');
+insert into suveniruri values(69, 'Vin spumant Brut de Channay',1, null, 'prieten', '01-JAN-17', '31-DEC-17', 'franceza',35,'vin_spumant.jpg');
 insert into suveniruri values(70, 'Macarons',1, null, 'fiica', '01-JAN-17', '31-DEC-17', 'franceza',15,'macarons.jpg');
-insert into suveniruri values(71, 'Macarons',1, null, 'fiica', '01-JAN-17', '31-DEC-17', 'franceza',15,'macarons.jpg');
+insert into suveniruri values(71, 'Macarons',1, null, 'sotie', '01-JAN-17', '31-DEC-17', 'franceza',15,'macarons.jpg');
 insert into suveniruri values(72, 'Macarons',1, null, 'prietena', '01-JAN-17', '31-DEC-17', 'franceza',15,'macarons.jpg');
 insert into suveniruri values(73, 'Macarons',1, null, 'nepoata', '01-JAN-17', '31-DEC-17', 'franceza',15,'macarons.jpg');
 insert into suveniruri values(74, 'Farfurie Decorativa Portelan Limoges',1, null, 'bunica', '01-JAN-17', '31-DEC-17', 'franceza',400,'farfurie_decorativa.jpg');
-insert into suveniruri values(75, 'Suporter Fotbal - Magnet Frigider Campionatul European Franta 2017',1, null, 'sot', '10-JUN-17', '10-JUL-17', 'franceza',35,'fotbal.jpg');
-insert into suveniruri values(76, 'Suporter Fotbal - Magnet Frigider Campionatul European Franta 2017',1, null, 'prieten', '10-JUN-17', '10-JUL-17', 'franceza',35,'fotbal.jpg');
-insert into suveniruri values(77, 'Suporter Fotbal - Magnet Frigider Campionatul European Franta 2017',1, null, 'frate', '10-JUN-17', '10-JUL-17', 'franceza',35,'fotbal.jpg');
+insert into suveniruri values(75, 'Suporter Fotbal-Magnet Frigider Campionatul European Franta',1, null, 'sot', '10-JUN-17', '10-JUL-17', 'franceza',35,'fotbal.jpg');
+insert into suveniruri values(76, 'Suporter Fotbal-Magnet Frigider Campionatul European Franta',1, null, 'prieten', '10-JUN-17', '10-JUL-17', 'franceza',35,'fotbal.jpg');
+insert into suveniruri values(77, 'Suporter Fotbal-Magnet Frigider Campionatul European Franta',1, null, 'frate', '10-JUN-17', '10-JUL-17', 'franceza',35,'fotbal.jpg');
 insert into suveniruri values(78, 'Chanel no5',1, null, 'sotie', '01-JAN-17', '31-DEC-17', 'franceza',700,'no5.jpg');
 insert into suveniruri values(79, 'Chanel no5',1, null, 'sora', '01-JAN-17', '31-DEC-17', 'franceza',700,'no5.jpg');
 insert into suveniruri values(80, 'Sapca urechi Minnie',1, null, 'fiica', '01-JAN-17', '31-DEC-17', 'franceza',100,'minie.jpg');
@@ -170,9 +270,9 @@ insert into suveniruri values(86, 'Ciocolata Cadbury',4, null, 'prietena', '01-J
 insert into suveniruri values(87, 'Jucarie London Bus',4, null, 'fiu', '01-JAN-17', '31-DEC-17', 'britanica',40,'london_bus.jpg');
 insert into suveniruri values(88, 'Jucarie soldatel',4, null, 'fiu', '01-JAN-17', '31-DEC-17', 'britanica',30,'soldatel.jpg');
 insert into suveniruri values(89, 'Jucarie Mini',4, null, 'fiu', '01-JAN-17', '31-DEC-17', 'britanica',50,'mini.jpg');
-insert into suveniruri values(90, 'Jucarie Mini',4, null, 'fiu', '01-JAN-17', '31-DEC-17', 'britanica',50,'mini.jpg');
-insert into suveniruri values(91, 'Jucarie Mini',4, null, 'fiu', '01-AUG-17', '15-SEP-17', 'britanica',20,'notebook.jpg');
-insert into suveniruri values(92, 'Jucarie Mini',4, null, 'fiica', '01-AUG-17', '15-SEP-17', 'britanica',20,'notebook.jpg');
+insert into suveniruri values(90, 'Jucarie Mini',4, null, 'nepot', '01-JAN-17', '31-DEC-17', 'britanica',50,'mini.jpg');
+insert into suveniruri values(91, 'Carnetel',4, null, 'fiu', '01-AUG-17', '15-SEP-17', 'britanica',20,'notebook.jpg');
+insert into suveniruri values(92, 'Carnetel',4, null, 'fiica', '01-AUG-17', '15-SEP-17', 'britanica',20,'notebook.jpg');
 insert into suveniruri values(93, 'Jucarie urs',4, null, 'fiica', '01-AUG-17', '15-SEP-17', 'britanica',78,'bear.jpg');
 insert into suveniruri values(94, 'Jucarie urs',4, null, 'fiu', '01-JUN-17', '15-JUL-17', 'britanica',78,'bear.jpg');
 insert into suveniruri values(95, 'Whiskey',4, null, 'sot', '01-JAN-17', '31-DEC-17', 'britanica',300,'whiskey.jpg');
@@ -362,108 +462,3 @@ insert into suveniruri values(462, 'Cruciulita',31, null, 'bunica', '01-JAN-17',
 insert into suveniruri values(463, 'Cruciulita',31, null, 'bunic', '01-JAN-17', '01-DEC-17', 'israeliana',50,'cruciulita.jpg');
 insert into suveniruri values(464, 'Puzzle tematic',31, null, 'fiu', '01-JAN-17', '01-DEC-17', 'israeliana',80,'puzzle_jew.jpg');
 insert into suveniruri values(465, 'Puzzle tematic',31, null, 'fiica', '01-JAN-17', '01-DEC-17', 'israeliana',80,'puzzle_jew.jpg');
-
---Romania
-insert into suveniruri(id_suvenir, nume, id_tara, id_punct_interes, profil, inceput_perioada, sfarsit_perioada, cultura, pret) values(1, 'martisor', 2, 1, 'fiica', '01-FEB-17', '31-MAR-17','romaneasca', 15);
-insert into suveniruri(id_suvenir, nume, id_tara, id_punct_interes, profil, inceput_perioada, sfarsit_perioada, cultura, pret) values(2, 'martisor', 2, 2, 'fiu', '01-FEB-17', '31-MAR-17','romaneasca', 15);
-insert into suveniruri(id_suvenir, nume, id_tara, id_punct_interes, profil, inceput_perioada, sfarsit_perioada, cultura, pret) values(3, 'martisor', 2, 3, 'nepot', '01-FEB-17', '31-MAR-17','romaneasca', 15);
-insert into suveniruri(id_suvenir, nume, id_tara, id_punct_interes, profil, inceput_perioada, sfarsit_perioada, cultura, pret) values(4, 'martisor', 2, 4, 'nepoata', '01-FEB-17', '31-MAR-17','romaneasca', 15);
-insert into suveniruri(id_suvenir, nume, id_tara, id_punct_interes, profil, inceput_perioada, sfarsit_perioada, cultura, pret) values(5, 'martisor', 2, 5, 'bunic', '01-FEB-17', '31-MAR-17','romaneasca', 15);
-insert into suveniruri(id_suvenir, nume, id_tara, id_punct_interes, profil, inceput_perioada, sfarsit_perioada, cultura, pret) values(6, 'martisor', 2, 6, 'bunica', '01-FEB-17', '31-MAR-17','romaneasca', 15);
-insert into suveniruri(id_suvenir, nume, id_tara, id_punct_interes, profil, inceput_perioada, sfarsit_perioada, cultura, pret) values(7, 'martisor', 2, 7, 'sot', '01-FEB-17', '31-MAR-17','romaneasca', 15);
-insert into suveniruri(id_suvenir, nume, id_tara, id_punct_interes, profil, inceput_perioada, sfarsit_perioada, cultura, pret) values(8, 'martisor', 2, 8, 'sotie', '01-FEB-17', '31-MAR-17','romaneasca', 15);
-insert into suveniruri(id_suvenir, nume, id_tara, id_punct_interes, profil, inceput_perioada, sfarsit_perioada, cultura, pret) values(9, 'martisor', 2, 1, 'frate', '01-FEB-17', '31-MAR-17','romaneasca', 15);
-insert into suveniruri(id_suvenir, nume, id_tara, id_punct_interes, profil, inceput_perioada, sfarsit_perioada, cultura, pret) values(10, 'martisor', 2, 2, 'sora', '01-FEB-17', '31-MAR-17','romaneasca', 15);
-insert into suveniruri(id_suvenir, nume, id_tara, id_punct_interes, profil, inceput_perioada, sfarsit_perioada, cultura, pret) values(11, 'martisor', 2, 3, 'prieten', '01-FEB-17', '31-MAR-17','romaneasca', 15);
-insert into suveniruri(id_suvenir, nume, id_tara, id_punct_interes, profil, inceput_perioada, sfarsit_perioada, cultura, pret) values(12, 'martisor', 2, 4, 'prietena', '01-FEB-17', '31-MAR-17','romaneasca', 15);
-
-insert into suveniruri values(33, 'Stegul Romaniei',2, null, 'nepot', '01-JAN-17', '31-DEC-17', 'romaneasca', 20,'steag.jpg');
-insert into suveniruri values(34, 'Stegul Romaniei',2, null, 'nepoata', '01-JAN-17', '31-DEC-17', 'romaneasca',20,'steag.jpg');
-insert into suveniruri values(35, 'Stegul Romaniei',2, null, 'frate', '01-JAN-17', '31-DEC-17', 'romaneasca',20,'steag.jpg');
-insert into suveniruri values(36, 'Stegul Romaniei',2, null, 'sora', '01-JAN-17', '31-DEC-17', 'romaneasca',20,'steag.jpg');
-insert into suveniruri values(37, 'Stegul Romaniei',2, null, 'prieten', '01-JAN-17', '31-DEC-17', 'romaneasca',20,'steag.jpg');
-insert into suveniruri values(38, 'Stegul Romaniei',2, null, 'prietena', '01-JAN-17', '31-DEC-17', 'romaneasca',20,'steag.jpg');
-insert into suveniruri values(39, 'Stegul Romaniei',2, null, 'bunic', '01-JAN-17', '31-DEC-17', 'romaneasca',20,'steag.jpg');
-insert into suveniruri values(40, 'Stegul Romaniei',2, null, 'bunica', '01-JAN-17', '31-DEC-17', 'romaneasca',20,'steag.jpg');
-
-insert into suveniruri values(41, 'Magnet Castelul Bran',2, null, 'frate', '01-JAN-17', '31-DEC-17', 'romaneasca',10,'bran-frate.jpg');
-insert into suveniruri values(42, 'Magnet Castelul Bran',2, null, 'sora', '01-JAN-17', '31-DEC-17', 'romaneasca',10,'castelul-bran.jpg');
-insert into suveniruri values(43, 'Magnet Castelul Bran',2, null, 'bunic', '01-JAN-17', '31-DEC-17', 'romaneasca',10,'castelul-bran-bunic.jpg');
-insert into suveniruri values(44, 'Magnet Castelul Bran',2, null, 'bunica', '01-JAN-17', '31-DEC-17', 'romaneasca',10,'castelul-bran.jpg'
-insert into suveniruri values(45, 'Magnet Castelul Bran',2, null, 'nepot', '01-JAN-17', '31-DEC-17', 'romaneasca',10,'castelul-bran.jpg');
-insert into suveniruri values(46, 'Magnet Castelul Bran',2, null, 'nepoata', '01-JAN-17', '31-DEC-17', 'romaneasca',10,'castelul-bran.jpg');
-insert into suveniruri values(47, 'Magnet Castelul Bran',2, null, 'prieten', '01-JAN-17', '31-DEC-17', 'romaneasca',10,'castelul-bran.jpg');
-insert into suveniruri values(48, 'Magnet Castelul Bran',2, null, 'prietena', '01-JAN-17', '31-DEC-17', 'romaneasca',10,'castelul-bran.jpg');
-insert into suveniruri values(49, 'Magnet Castelul Bran',2, null, 'sot', '01-JAN-17', '31-DEC-17', 'romaneasca',10,'castelul-bran.jpg');
-insert into suveniruri values(50, 'Magnet Castelul Bran',2, null, 'sotie', '01-JAN-17', '31-DEC-17', 'romaneasca',10,'castelul-bran.jpg');
-
---Franta
---select id_tara from tara where nume='Franta';
---select id_punct_interes from puncte_interes where id_tara=1;
-insert into suveniruri values(13, 'breloc cu Turnul Eiffel',1, null, 'fiica', '01-JAN-17', '31-DEC-17', 'franceza', 30,'eiffel-mama.jpg');
-insert into suveniruri values(14, 'breloc cu Turnul Eiffel',1, null, 'fiu', '01-JAN-17', '31-DEC-17', 'franceza',30,'eiffel.jpg');
-insert into suveniruri values(15, 'breloc cu Turnul Eiffel',1, null, 'nepot', '01-JAN-17', '31-DEC-17', 'franceza',30,'eiffel.jpg');
-insert into suveniruri values(16, 'breloc cu Turnul Eiffel',1, null, 'nepoata', '01-JAN-17', '31-DEC-17', 'franceza',30,'eiffel-bunica.jpg');
-insert into suveniruri values(17, 'breloc cu Turnul Eiffel',1, null, 'prieten', '01-JAN-17', '31-DEC-17', 'franceza',30,'eiffel.jpg');
-insert into suveniruri values(18, 'breloc cu Turnul Eiffel',1, null, 'prietena', '01-JAN-17', '31-DEC-17', 'franceza',30,'eiffel-bunica.jpg');
-insert into suveniruri values(19, 'breloc cu Turnul Eiffel',1, null, 'bunic', '01-JAN-17', '31-DEC-17', 'franceza',30,'eiffel.jpg');
-insert into suveniruri values(20, 'breloc cu Turnul Eiffel',1, null, 'bunica', '01-JAN-17', '31-DEC-17', 'franceza',30,'eiffel-bunica.jpg');
-insert into suveniruri values(21, 'breloc cu Turnul Eiffel',1, null, 'sot', '01-JAN-17', '31-DEC-17', 'franceza',30,'eiffel.jpg');
-insert into suveniruri values(22, 'breloc cu Turnul Eiffel',1, null, 'sotie', '01-JAN-17', '31-DEC-17', 'franceza',30,'eiffel-mama.jpg');
-insert into suveniruri values(23, 'breloc cu Turnul Eiffel',1, null, 'frate', '01-JAN-17', '31-DEC-17', 'franceza',30,'eiffel.jpg');
-insert into suveniruri values(24, 'breloc cu Turnul Eiffel',1, null, 'sora', '01-JAN-17', '31-DEC-17', 'franceza',30,'eiffel-mama.jpg');
-
-insert into suveniruri values(25, 'parfum "Opium" de la Yves Saint Laurent',1, null, 'fiica', '01-JAN-17', '31-DEC-17', 'franceza',250,'black-opium.jpg');
-insert into suveniruri values(26, 'parfum "Opium" de la Yves Saint Laurent',1, null, 'sotie', '01-JAN-17', '31-DEC-17', 'franceza',250,'red-opium.jpg');
-insert into suveniruri values(26, 'parfum "Opium" de la Yves Saint Laurent',1, null, 'prietena', '01-JAN-17', '31-DEC-17', 'franceza',250,'red-opium.jpg');
-insert into suveniruri values(27, 'parfum "Opium" de la Yves Saint Laurent',1, null, 'sora', '01-JAN-17', '31-DEC-17', 'franceza',250,'black-opium.jpg');
-insert into suveniruri values(200, 'parfum "Opium" de la Yves Saint Laurent',1, null, 'nepoata', '01-JAN-17', '31-DEC-17', 'franceza',250,'red-opium.jpg');
-insert into suveniruri values(201, 'parfum "Opium" de la Yves Saint Laurent',1, null, 'bunica', '01-JAN-17', '31-DEC-17', 'franceza',250,'red-opium.jpg');
-
-
-
-
---Germania
-select id_tara from tara where nume='Germania';
-
-insert into suveniruri values(51, 'Halba de bere',8, null, 'frate', '01-JAN-17', '31-DEC-17', 'germana',60,'halba.jpg');
-insert into suveniruri values(52, 'Halba de bere',8, null, 'sot', '01-JAN-17', '31-DEC-17', 'germana',60,'halba.jpg');
-insert into suveniruri values(53, 'Halba de bere',8, null, 'bunic', '01-JAN-17', '31-DEC-17', 'germana',60,'halba.jpg');
-insert into suveniruri values(54, 'Halba de bere',8, null, 'prieten', '01-JAN-17', '31-DEC-17', 'germana',60,'halba.jpg');
-insert into suveniruri values(55, 'Halba de bere',8, null, 'nepot', '01-JAN-17', '31-DEC-17', 'germana',60,'halba.jpg');
-insert into suveniruri values(202, 'Halba de bere',8, null, 'bunica', '01-JAN-17', '31-DEC-17', 'germana',60,'halba-femei.jpg');
-insert into suveniruri values(203, 'Halba de bere',8, null, 'sora', '01-JAN-17', '31-DEC-17', 'germana',60,'halba-femei.jpg');
-insert into suveniruri values(204, 'Halba de bere',8, null, 'sotie', '01-JAN-17', '31-DEC-17', 'germana',60,'halba-femei.jpg');
-
-insert into suveniruri values(204, 'Ceasuri Cuckoo',8, null, 'sotie', '01-JAN-17', '31-DEC-17', 'germana',300,'cuckoo.jpg');
-insert into suveniruri values(205, 'Ceasuri Cuckoo',8, null, 'sora', '01-JAN-17', '31-DEC-17', 'germana',300,'cuckoo.jpg');
-insert into suveniruri values(206, 'Ceasuri Cuckoo',8, null, 'bunica', '01-JAN-17', '31-DEC-17', 'germana',300,'cuckoo.jpg');
-insert into suveniruri values(207, 'Ceasuri Cuckoo',8, null, 'prietena', '01-JAN-17', '31-DEC-17', 'germana',300,'cuckoo.jpg');
-insert into suveniruri values(208, 'Ceasuri Cuckoo',8, null, 'bunic', '01-JAN-17', '31-DEC-17', 'germana',300,'cuckoo.jpg');
-insert into suveniruri values(209, 'Ceasuri Cuckoo',8, null, 'nepoata', '01-JAN-17', '31-DEC-17', 'germana',300,'cuckoo.jpg');
-insert into suveniruri values(210, 'Ceasuri Cuckoo',8, null, 'nepot', '01-JAN-17', '31-DEC-17', 'germana',300,'cuckoo.jpg');
-
-insert into suveniruri values(211, 'Muelhens Original Eau de Cologne',8, null, 'sotie', '01-JAN-17', '31-DEC-17', 'germana',500,'cologne.jpg');
-insert into suveniruri values(212, 'Muelhens Original Eau de Cologne',8, null, 'fiica', '01-JAN-17', '31-DEC-17', 'germana',500,'cologne.jpg');
-insert into suveniruri values(213, 'Muelhens Original Eau de Cologne',8, null, 'nepoata', '01-JAN-17', '31-DEC-17', 'germana',500,'cologne.jpg');
-insert into suveniruri values(214, 'Muelhens Original Eau de Cologne',8, null, 'bunica', '01-JAN-17', '31-DEC-17', 'germana',500,'cologne.jpg');
-insert into suveniruri values(215, 'Muelhens Original Eau de Cologne',8, null, 'prietena', '01-JAN-17', '31-DEC-17', 'germana',500,'cologne.jpg');
-
-insert into suveniruri values(216, 'Halba in forma de corn Cuchulainn',8, null, 'frate', '01-JAN-17', '31-DEC-17', 'germana',60,'horn.jpg');
-insert into suveniruri values(217, 'Halba in forma de corn Cuchulainn',8, null, 'sot', '01-JAN-17', '31-DEC-17', 'germana',60,'horn.jpg');
-insert into suveniruri values(218, 'Halba in forma de corn Cuchulainn',8, null, 'bunic', '01-JAN-17', '31-DEC-17', 'germana',60,'horn.jpg');
-insert into suveniruri values(219, 'Halba in forma de corn Cuchulainn',8, null, 'prieten', '01-JAN-17', '31-DEC-17', 'germana',60,'horn.jpg');
-insert into suveniruri values(220, 'Halba in forma de corn Cuchulainn',8, null, 'nepot', '01-JAN-17', '31-DEC-17', 'germana',60,'horn.jpg');
-
-
---Japonia
-
-select id_tara from tara where nume='Japonia';
-
-insert into suveniruri values(57, 'Evantai Sensu',19, null, 'nepoata', '01-JAN-17', '31-DEC-17', 'japoneza',100,'evantai.jpg');
-insert into suveniruri values(59, 'Evantai Sensu',19, null, 'prietena', '01-JAN-17', '31-DEC-17', 'japoneza',100'evantai.jpg');
-insert into suveniruri values(60, 'Evantai Sensu',19, null, 'sora', '01-JAN-17', '31-DEC-17', 'japoneza',100,'evantai.jpg');
-insert into suveniruri values(63, 'Evantai Sensu',19, null, 'sotie', '01-JAN-17', '31-DEC-17', 'japoneza',100,'evantai.jpg');
-insert into suveniruri values(65, 'Evantai Sensu',19, null, 'bunica', '01-JAN-17', '31-DEC-17', 'japoneza',100,'evantai.jpg');
-insert into suveniruri values(67, 'Evantai Sensu',19, null, 'prietena', '01-JAN-17', '31-DEC-17', 'japoneza',100,'evantai.jpg');
-
