@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://scholarly.vernacular.io/ -->
+<html lang="en-GB"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width">
+    <title>Scholarly HTML — Markedly Smart</title>
+    <link rel="stylesheet" href="./Scholarly HTML — Markedly Smart_files/scholarly.css">
+    <link rel="stylesheet" href="./Scholarly HTML — Markedly Smart_files/prism-coy.css">
+    <script src="./Scholarly HTML — Markedly Smart_files/prism.js.download" defer=""></script>
+  </head>
+  <body prefix="schema: http://schema.org/ xsd: http://www.w3.org/2001/XMLSchema# sa: https://ns.science.ai/">
+    <article id="what" typeof="schema:ScholarlyArticle" resource="#">
+      <h1>Ce este Souvenir Recommender?</h1>
+      <section>
+        <ol>
+          <li property="schema:author" typeof="sa:ContributorRole">
+            <a property="schema:author" href="http://berjon.com/" typeof="schema:Person">
+              <span property="schema:givenName">Raluca-Stefana</span>
+              <span property="schema:familyName">Chicos</span>
+            </a>
+          </li>
+          <li property="schema:contributor" typeof="sa:ContributorRole">
+            <a property="schema:contributor" href="https://github.com/sballesteros" typeof="schema:Person">
+              <span property="schema:givenName">Gabriela</span>
+              <span property="schema:familyName">Ivascu</span>
+            </a>
+		 <li property="schema:contributor" typeof="sa:ContributorRole">
+            <a property="schema:contributor" href="https://github.com/sballesteros" typeof="schema:Person">
+              <span property="schema:givenName">Monica-Eliza</span>
+              <span property="schema:familyName">Chmilevski</span>
+            </a>
+          </li>
+        </ol>
+        <ol>
+          <li id="scienceai">
+            <a href="http://science.ai/" typeof="schema:Corporation">
+              <span property="schema:name">Facultatea de Informatica Iasi</span>
+            </a>
+          </li>
+        </ol>
+      </section>
+
+      <section typeof="sa:Abstract" id="abstract">
+        <h2>Introducere</h2>
+        <p>
+          Souvenir Recommender(SouR) este aplicatia WEB ce pune la dispozitia turistilor posibilitatea de a cauta suveniruri in functie de diverse criterii, 
+		  cum ar fi data voiajul, tara in care calatoreste si cui i se ofera suvenirul respectiv.
+        </p>
+      </section>
+      <section typeof="sa:MaterialsAndMethods" id="motivation">
+        <h2>Motivatie</h2>
+        <aside>
+          <p>
+			In general, persoanele cand pleaca intr-o alta tara indiferent de motivul calatorie sunt asteptate sa vina acasa cu cadouri pentru cei dragi.
+		    Printre problemele intanite cel mai des in alegerea unui suvenir, enumeran incapacitea de a se incadra in buget,
+			alegerea lucrurilot nepotrivite pentru cei de acasa, alegerea de cadouri nespecifice tarii vizitate. Din fericire,
+			aplicatia Souvenir Recommender vine in intampinarea turistilor care au intalnit astfel impedimente in alegerea
+			suvenirului. 
+			
+          </p>
+        <p>
+          Obiectivele noastre sunt:
+        </p>
+        <ul>
+          <li>
+            Oferirea de o gama larga de suveniruri pentru toate varstele.
+          </li>
+          <li>
+            Oferirea de suveniruri diferite pentru fiecare tara in parte.
+          </li>
+          <li>
+            Oferirea de suveniruri valabile in functie de perioada efectuarii calatoriei.
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Folosirea aplicatiei</h2>
+		<h3>Utilizator</h3>
+        <p>
+        Prima data, turistul trebuie sa se inregistreze prin completarea formularului de la SignUp.
+		Apoi acesta acceseaza Login-ul si intra in aplicatie. 
+		In Contul meu acesta isi poate vizualiza datele personale si de asemenea isi poate actualiza parola.
+		In sectiunea “Formular”, acesta isi insereaza preferintele iar dupa apasarea butonului Trimite, va primi lista cu suveniruri, 
+		o poza cu acestea si pretul.
+		De asemenea lista suvenirurilor va fi disponibila si in format CSV, XML, JSON.
+		In sectiunea “Statistici”, acesta poate vizualiza care sunt cele mai vizitate tari in anul respectiv.
+		Pentru a iesi din aplicatie intra in sectiunea Deconetare si apasa Logout. 
+		</p>
+		
+		<h3>Administrator</h3>	
+		<p>
+		Adminul pentru a intra in aplicatie acceseaza butonul “Admin”, completeaza Login-ul si apoi este redirectionat catre aplicatie.
+		Acesta poate adauga un suvenir unde trebuie sa insereze datele necesare si o poza cu acesta. 
+		De asemenea, poate sa stearga un suvenir sau sa vizualizeze toate suvenirurile din baza de date.
+		Pentru a iesi din aplicatie intra in sectiunea Deconetare si apasa Logout.
+        </p>
+        <section>
+          <h2>Etapele realizarii proiectului</h2>
+          <ol type="1">
+			<li>Realizarea arhitecturii bazei de date</li>
+			<li>Popularea bazei de date</li>
+			<li>Crearea paginilor de start +login+signup</li>
+			<li>Crearea paginilor pentru user (Acasa, Contul Meu, Formular, Statistici, Deconectare)</li>
+			<li>Crearea paginilor pentru admin (Acasa, Adaugare suvenir, Stergere suvenir, Listare suvenir, Deconectare)</li>
+			<li>Realizarea back-endului</li>
+		</ol>
+		<h3>Realizarea arhitecturii bazei de date</h3>
+		<p>
+		Am inceput prin a crea o diagrama UML ce precizeaza modalitatea de conectare a tabelele din baza de date. 
+		Astfel ne-am facut o idee mai precisa asupra cum ar trebui sa functioneze aplicatia.
+		</p>
+		<h3>Popularea bazei de date</h3>
+		<p>
+		Acest pas a constatat in crearea tabelelor si respectiv popularea lor cu date relevante. 
+		</p>
+		<h3>Crearea paginilor de start +login+signup</h3>
+		<p>
+		Dupa ce am terminat lucrul cu baza de date, ne-am apucat de partea de front-end,
+		iar aici primii pasi au fost crearea paginilor de start, log-in si sign-up folosindu-ne doar de html si css.
+		</p>
+		<h3>Crearea paginilor pentru user,admin</h3>
+		<p>
+		Reusind sa ne obisnuim cu lucrul in html si css, paginile urmatoare la care am lucrat au fost cele pentru user si cele pentru admin.
+		</p>
+		<h3>Realizarea back-endului</h3>
+		<p>
+		Dupa ce am finalizat partea de frontend, am putut sa ne apucam de backend iar aici am inceput prin a crea pagini php pentru formular,
+		pentru statistici, am reusit sa facem stergere si inserare de suveniruri, 
+		vizualizarea contului userului conectat sau actualizarea parolei. 
+		Pentru admin am realizat functionalitatea de stergere si adaugare de suvenir.
+		Pentru stergerea de suvenir, am implementat si functionalitatea de listare a informatiilor din tabela suveniruri.
+		</p>
+</body></html>
